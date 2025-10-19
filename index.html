@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Mood Meals&trade;</title>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <header>
+            <div class="fade-in">
+                <h1>Mood Meals &trade;</h1>
+                <p>Feel it. Feed it.</p>
+            </div>
+            <button class="cta">Explore Recipes by Mood</button>
+            <button class="cta secondary"><a href="#footer">Join the Inner Pantry</a></button>
+        </header>
+        <section class="mood-selector">
+            <h2>What are you feeling today?</h2>
+            <div class="moods">
+                <button><a href="./sad.html">😢 Sad</a></button>
+                <button>😡 Angry</button>
+                <button>😍 In Love</button>
+                <button>😶 Meh</button>
+                <button>🤪 Chaotic</button>
+                <button>🧘🏻‍♀️ Calm</button>
+            </div>
+        </section>
+
+        <section class="featured-recipes">
+            <h2>Featured Recipes</h2>
+            <div class="card-container">
+                <!-- Flipping card -->
+                <div class="card" onclick="this.classList.toggle('flipped')">
+                    <div class="card-face front recipe-card">
+                        <h3>Cry Mac & Cheese</h3>
+                        <p>Heals 3/5 heartbreaks</p>
+                    </div>
+                    <div class="card-face back recipe-card">
+                        <h3>Recipe</h3>
+                        <p>Boil pasta, melt cheese, cry gently into the pot. Serve warm.</p>
+                    </div>
+                </div>
+                <!-- Static cards -->
+                <div class="recipe-card">
+                    <h3>Revenge Brownies</h3>
+                    <p>So rich it'll make your ex jealous.</p>
+                </div>
+                <div class="recipe-card">
+                    <h3>Sunshine Tacos</h3>
+                    <p>Bright enough to cure a bad day.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="vip-teaser">
+            <h2>Unlock the Inner Pantry</h2>
+            <p>Secret recipes, mood playlists, and emotional ingredient drops.</p>
+            <button class="cta">Become a Mood Member</button>
+        </section>
+
+        <footer id="footer">
+            <p>We are not therapists. Just Hungry.</p>
+            <p>&copy; 2025 Mood Meals&trade;</p>
+        </footer>
+    </body>
+</html>
