@@ -1,2 +1,4 @@
-# iretiola-007-github.io
-Mood Meals. An imaginary restaurant, deals with moods
+# Mood Meals
+An imaginary restaurant's site, chill your moods. Tackle your feelings. 
+
+Our slogan: Feel it. Feed it.
