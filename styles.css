@@ -26,28 +26,13 @@ h1 {
     border: 1px solid teal;
     box-shadow: 2px 2px grey;
     border-radius: 8px;
-    background-color: deeppink;
-    color: rgb(255, 155, 208);
+    background-color: #ff6b81;
+    color: white;
     cursor: pointer;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .cta.secondary {
-    background-color: #7c4acc;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.cta:hover {
-    background-color: #ff2949;
-    transform: scale(1.1);
-}
-
-.cta.secondary:hover {
-    background-color: #4631e6;
-    transform: scale(1.1);
+    background-color: #6c5ce7;
 }
 
 .mood-selector {
@@ -59,22 +44,60 @@ h1 {
     margin: 0.5rem;
     padding: 15px 25px;
     font-size: 18px;
-    border: /* none */ 0.3rem 0.3rem ridge teal; /* Change this back later */
-    box-shadow: 5px 5px 7px grey; /* Change this later */
+    border: /* none */ 1px solid teal; /* Change this back later */
+    box-shadow: 2px 2px grey; /* Change this later */
     border-radius: 12px;
     background-color: #f0f0f0;
     cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s eas, background-color 0.3s ease;
 }
 
 .moods button:hover {
-    background-color: hotpink;
+    background-color: #facdce;
     transform: scale(1.1);
+}
+
+button {
+    /* transition: background-color 0.3s; */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+button:hover {
+    background-color: #f7657b;
+    transform: scale(1.05);
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
 
 .featured-recipes {
     padding: 2rem;
+    margin-top: 2rem; /* added this*/
     background-color: #f0f0ff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.featured-recipes.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.recipe-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.recipe-card {
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .recipe-card:hover {
@@ -116,117 +139,57 @@ footer {
     }
 }
 
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 2.5s ease forwards;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 3;
-    }
-}
-
-.card-container {
+.flip-card {
+    width: 200px;
+    height: 330px; /* bumped it up */
     perspective: 1000px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem; /* more space between cards */
-    justify-content: center;
-    margin-bottom: 3rem; /* space before next section */
 }
 
-.card-container:hover.card {
-    transform: rotateY(180deg);
-}
-
-.card {
-    width: 300px;
-    height: 400px;
+.flip-card-inner {
     position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
     transform-style: preserve-3d;
-    cursor: pointer;
-    background-color: transparent; /* Prevent background overlap */
-    padding: 20px;
     border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border: 2px ridge rosybrown;
+    border-radius: 16px;
+    /* moved */
+    background-color: transparent;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    padding-top: 15px;
+    padding: 0.5rem;
+    box-sizing: border-box;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.8s ease;
-    overflow: hidden; /* or scroll/auto for scrollbars */
-}
-
-.card.flipped {
-    transform: rotateY(180deg);
-}
-
-.card-face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    transform-style: preserve-3d;
-}
-
-.front {
-    background-color: #fff;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 12px;
-    padding: 20px;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    z-index: 2;
-    background: linear-gradient(to bottom right, #fdf6f0, #ffe4e1);
+    text-overflow: ellipsis;
+    word-wrap: break-word;
 }
 
-.back {
-    background-color: #ffe0e0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 12px;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow: hidden;
+.flip-card-front {
+    background-color: lightpink;
+    color: #854b4b;
+}
+
+.flip-card-back {
+    background-color: #fff8dc;
+    color: #303;
     transform: rotateY(180deg);
-    background: #fff8dc;
-}
-
-.recipe-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.card-face.back {
-    transform: rotateY(180deg);
-    background-color: #ffe0e0;
-    z-index: 2;
-}
-
-a {
-    text-decoration: none;
-}
-
-h3 + a {
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    border: 2px ridge grey;
-    border-radius: 20px;
-    background-color: deeppink;
-    padding: 5px;
-    margin: 5px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow-y: auto;
 }
