@@ -193,3 +193,5 @@ footer {
     transform: rotateY(180deg);
     overflow-y: auto;
 }
+
+a {text-decoration: none;}
