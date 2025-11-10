@@ -26,34 +26,45 @@ body {
 
 .meals {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
     padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .meal-card {
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 2x 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4x 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.2s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 350px;
 }
 
 .meal-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .meal-card img {
     width: 100%;
+    height: 180px;
     display: block;
+    object-fit: cover;
 }
 
 .meal-card .meal-info {
-    padding: 1rem;
+    padding: 1rem 1.2rem;
+    flex-grow: 1;
 }
 
 .meal-card .meal-info h3 {
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.6rem 0;
+    font-size: 1.25rem;
 }
 
 .cta {
@@ -73,4 +84,9 @@ body {
 
 .cta a:hover {
     background: #357ab8;
+}
+
+.meal-card .meal-info p {
+    font-size: 1rem;
+    color: #555;
 }
