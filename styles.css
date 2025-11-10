@@ -99,9 +99,11 @@ button:hover {
     padding: 20px;
     border-radius: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
     width: 200px;
     text-align: center;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
+    flex: 1 1 300px;
 }
 
 .recipe-card:hover {
@@ -142,7 +144,8 @@ footer {
         padding: 0.5rem;
     }
     .recipe-card img {
-        height: 150px;
+        width: 100%;
+        min-height: 200px;
     }
 }
 
