@@ -141,6 +141,9 @@ footer {
         font-size: 1rem;
         padding: 0.5rem;
     }
+    .recipe-card img {
+        height: 150px;
+    }
 }
 
 .flip-card {
@@ -286,12 +289,3 @@ a {
     object-fit: cover;
 }
 
-/* Responsiveness for mobile */
-@media (max-width: 480px) {
-    .recipe-card {
-        height: auto;
-    }
-    .recipe-card img {
-        height: 150px;
-    }
-}
