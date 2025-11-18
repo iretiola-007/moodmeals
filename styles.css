@@ -160,7 +160,13 @@ footer {
 
     .flip-card {
         width: 100%;
-        max-width: 250px;
+        max-width: 300px;
+        margin-bottom: 1.5rem;
+    }
+
+    .flip-card-inner,.flip-card-front, flip-card-back {
+        height: auto;
+        min-height: 300px;
     }
 }
 
@@ -169,6 +175,8 @@ footer {
     height: 100%; /* bumped it up */
     perspective: 1000px;
     display: inline;
+    flex: 1 1 300px;
+    max-width: 300px;
 }
 
 .flip-card-inner {
@@ -308,7 +316,7 @@ a {
 }
 
 .flip-card-front img {
-    width: 95%;
+    width: 100%;
     min-width: 100px;
     height: auto; 
     /* display: block; */
