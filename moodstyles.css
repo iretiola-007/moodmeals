@@ -46,9 +46,9 @@ body {
     overflow-y: auto;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .meal-card {
-        width: 350px;
+        width: 250px;
         display: flex;
         flex-wrap: wrap;
     }
