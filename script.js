@@ -1,4 +1,4 @@
-const featuredSection = document.querySelector('.featured-recipes');
+const featuredSection = document.querySelector('.featured-recipes, .meals');
 
 const observer = new IntersectionObserver((entries) =>{
     entries.forEach(entry=>{
