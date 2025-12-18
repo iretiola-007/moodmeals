@@ -85,6 +85,10 @@ h1 {
     cursor: pointer;
 }
 
+section a {
+    text-decoration: none;
+}
+
 .mood-selector {
     text-align: center;
     padding: 2rem 1rem;
