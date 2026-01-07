@@ -10,3 +10,17 @@ Stack Used:
 
 ## 🚀 Live Demo
 🔗 [View Live Site](https://iretiola-007.github.io/moodmeals/)
+
+## 📄 License
+
+MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+## 👤 Owner
+
+Iretiola  
+
+abisigairetiola@gmail.com
+
+https://github.com/iretiola-007
