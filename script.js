@@ -98,7 +98,7 @@ function createSnowflakes() {
 
 function drawSnowflakes() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = 'deeppink';
+  ctx.fillStyle = 'pink';
   ctx.beginPath();
   for (let flake of snowflakes) {
     ctx.moveTo(flake.x, flake.y);
